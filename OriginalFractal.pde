@@ -4,7 +4,7 @@ int y1 = 150;
 void setup()
 {
    size(800,800);
-
+   frameRate(15);
 }
 
 public void draw()
