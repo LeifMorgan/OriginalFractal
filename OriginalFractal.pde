@@ -1,31 +1,33 @@
-int increase = 0;
+int siz1 = 260;
+int x1 = 150;
+int y1 = 150;
 void setup()
 {
-   size(500,500);
+   size(800,800);
 
 }
 
 public void draw()
 {
-	background(255,0,0);
+	background(104,2,90);
 	noStroke();
 	fill(0);
-	myFractal(250,250,260+increase);
+	myFractal(x1+250,y1+250,siz1);
+	fill(205);
+	myFractal(x1,y1,siz1);
+	fill(105);
+	myFractal(x1,y1+500,siz1);
+	fill(155);
+	myFractal(x1+500,y1+500,siz1);
 	fill(60);
-	myFractal(0,0,260+increase);
-	fill(125);
-	myFractal(0,500,260+increase);
-	fill(190);
-	myFractal(500,500,260+increase);
-	fill(225);
-	myFractal(500,0,260+increase);
-		if(mouseButton == LEFT)
+	myFractal(x1+500,y1,siz1);
+	if(mouseButton == LEFT)
 	{
-		increase+=5;
+		siz1+=5;
 	}
-	if(mouseButton == RIGHT)
+	else if(mouseButton == RIGHT)
 	{
-		increase-=5;
+		siz1-=5;
 	}
 
 }
@@ -51,10 +53,10 @@ public void myFractal(int x, int y, int siz)
 
     if(siz > 20)
   {
-    myFractal(x-siz/2,y,siz/2);
-    myFractal(x+siz/2,y,siz/2);
-    myFractal(x,y+siz/2,siz/2);
-    myFractal(x,y-siz/2,siz/2);
+    myFractal(x-siz*2,y,siz/2);
+    myFractal(x+siz*2,y,siz/2);
+    myFractal(x,y+siz*2,siz/2);
+    myFractal(x,y-siz*2,siz/2);
   }
 
 
