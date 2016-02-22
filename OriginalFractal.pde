@@ -9,7 +9,7 @@ void setup()
 
 public void draw()
 {
-	background(104,2,90);
+	background(32,32,32);
 	noStroke();
 	fill(0);
 	myFractal(x1+250,y1+250,siz1);
